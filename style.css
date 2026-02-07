@@ -2,17 +2,18 @@
    Root Variables & Basic Styles
    ============================================ */
 :root {
-    --primary-color: #0066cc;
-    --primary-dark: #004499;
+    --primary-color: #00d4ff;
+    --primary-dark: #00a8cc;
     --secondary-color: #00d4ff;
     --accent-color: #ff6b35;
-    --text-dark: #1a1a1a;
-    --text-light: #666666;
-    --bg-light: #f8f9fa;
-    --bg-white: #ffffff;
-    --border-color: #e0e0e0;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --text-dark: #ffffff;
+    --text-light: #b0b0b0;
+    --bg-light: #1a1a1a;
+    --bg-white: #0d0d0d;
+    --bg-secondary: #1a1a1a;
+    --border-color: #2a2a2a;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 15px 40px rgba(0, 212, 255, 0.2);
 }
 
 * {
@@ -29,7 +30,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-white);
+    background-color: #0d0d0d;
     overflow-x: hidden;
 }
 
@@ -46,10 +47,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(13, 13, 13, 0.98);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 212, 255, 0.1);
     z-index: 1000;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .nav-container {
@@ -76,7 +78,7 @@ body {
 }
 
 .nav-link {
-    color: var(--text-dark);
+    color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -108,7 +110,7 @@ body {
 .hero {
     margin-top: 70px;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #1a1a2e 100%);
     color: white;
     min-height: calc(100vh - 70px);
     display: flex;
@@ -154,11 +156,11 @@ body {
 .profile-shape {
     width: 400px;
     height: 400px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 212, 255, 0.1);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    border: 3px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(0, 212, 255, 0.3);
 }
 
 .profile-shape img {
@@ -237,7 +239,7 @@ section {
    About Section
    ============================================ */
 .about {
-    background: var(--bg-light);
+    background: #0d0d0d;
 }
 
 .about-content {
@@ -260,12 +262,13 @@ section {
 }
 
 .stat-card {
-    background: white;
+    background: #1a1a1a;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .stat-card:hover {
@@ -287,7 +290,7 @@ section {
    Skills Section
    ============================================ */
 .skills {
-    background: white;
+    background: #0d0d0d;
 }
 
 .skills-grid {
@@ -297,16 +300,18 @@ section {
 }
 
 .skill-category {
-    background: var(--bg-light);
+    background: #1a1a1a;
     padding: 40px;
     border-radius: 15px;
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .skill-category:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
-    background: white;
+    background: #252525;
+    border-color: rgba(0, 212, 255, 0.3);
 }
 
 .skill-category h3 {
@@ -330,26 +335,26 @@ section {
 }
 
 .skill-tag {
-    background: white;
+    background: rgba(0, 212, 255, 0.1);
     color: var(--primary-color);
     padding: 10px 16px;
     border-radius: 25px;
     font-size: 14px;
     font-weight: 600;
-    border: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     transition: all 0.3s ease;
 }
 
 .skill-tag:hover {
     background: var(--primary-color);
-    color: white;
+    color: #0d0d0d;
 }
 
 /* ============================================
    Experience Section
    ============================================ */
 .experience {
-    background: var(--bg-light);
+    background: #0d0d0d;
 }
 
 .timeline {
@@ -396,10 +401,11 @@ section {
 }
 
 .timeline-content {
-    background: white;
+    background: #1a1a1a;
     padding: 30px;
     border-radius: 10px;
     box-shadow: var(--shadow);
+    border: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .timeline-content h3 {
@@ -423,7 +429,7 @@ section {
    Projects Section
    ============================================ */
 .projects {
-    background: white;
+    background: #0d0d0d;
 }
 
 .projects-grid {
@@ -433,11 +439,12 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: #1a1a1a;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .project-card:hover {
@@ -497,7 +504,7 @@ section {
    Contact Section
    ============================================ */
 .contact {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #1a1a2e 100%);
     color: white;
     text-align: center;
 }
@@ -516,13 +523,13 @@ section {
 }
 
 .contact-item {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 212, 255, 0.1);
     padding: 25px;
     border-radius: 10px;
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 212, 255, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -535,7 +542,8 @@ section {
 }
 
 .contact-item:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 212, 255, 0.2);
+    border-color: rgba(0, 212, 255, 0.6);
     transform: translateY(-5px);
 }
 
@@ -543,10 +551,11 @@ section {
    Footer
    ============================================ */
 .footer {
-    background: var(--text-dark);
-    color: white;
+    background: #0a0a0a;
+    color: var(--text-light);
     padding: 40px 20px;
     text-align: center;
+    border-top: 1px solid rgba(0, 212, 255, 0.1);
 }
 
 .footer .container {
